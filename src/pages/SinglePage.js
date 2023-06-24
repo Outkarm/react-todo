@@ -13,7 +13,7 @@ const SinglePage = () => {
       slug: 'about-author',
       title: 'About the Author',
       description:
-        'The app is developed by Utsargo Roy, a micronaut at microverse. Email: royutsargo@gmail.com, Linkedin: @utsargo-roy, Twitter: @royutsargo',
+        'The app is developed by John Kpordje, a micronaut at microverse.',
     },
   ];
   const { slug } = useParams();
