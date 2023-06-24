@@ -31,23 +31,21 @@ const TodoContainer = () => {
   }, [todos]);
 
   const handleChange = (id) => {
-    setTodos(todos.map((todo) => {
-      if (todo.id === id) {
-        return {
-          ...todo,
-          completed: !todo.completed,
-        };
-      }
-      return todo;
-    }));
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id === id) {
+          return {
+            ...todo,
+            completed: !todo.completed,
+          };
+        }
+        return todo;
+      }),
+    );
   };
 
   const delTodo = (id) => {
-    setTodos(
-      [
-        ...todos.filter((todo) => todo.id !== id),
-      ],
-    );
+    setTodos([...todos.filter((todo) => todo.id !== id)]);
   };
 
   const addTodoItem = (title) => {
@@ -56,9 +54,7 @@ const TodoContainer = () => {
       title,
       completed: false,
     };
-    setTodos(
-      [...todos, newTodo],
-    );
+    setTodos([...todos, newTodo]);
   };
 
   const setUpdate = (updatedTitle, id) => {
