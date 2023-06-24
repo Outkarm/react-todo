@@ -31,8 +31,6 @@
 
 # 📖 React To-do <a name="about-project"></a>
 
-> A to-do app built with React and react-router from microverse curriculam.
-
 **React To-do**
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -84,8 +82,6 @@
 
 > Coming soon...
 
-- <a href="http://react-todo.utsargo.tech/" target="_blank">Live Demo Link</a>
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -99,7 +95,7 @@ To get a local copy up and running, follow these steps.
 Clone this repository to your desired folder:
 
 ```sh
-  git clone git@github.com:portfolio-roy/leaderboard.git
+  git clone git@github.com:Outkarm/react-todo.git
   cd to-do-list
 ```
 
@@ -127,15 +123,13 @@ You can deploy this project using [Github Pages](https://docs.github.com/en/page
 
 <!-- AUTHORS -->
 
-## 👥 Author
+## 👥 Authors <a name="authors"></a>
 
-<a name="authors"></a>
+👤 **John Kpordje**
 
-👤 **Utsargo Roy**
-
-- GitHub: [@utsargo](https://github.com/utsargo)
-- Twitter: [@royutsargo](https://twitter.com/royutsargo)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/utsargo-roy/)
+- GitHub: [@Outkarm](https://github.com/Outkarm)
+- Twitter: [@outkarm](https://twitter.com/outkarm)
+- LinkedIn: [John Kpordje](https://www.linkedin.com/in/john-kpordje-866749241/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
