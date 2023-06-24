@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FaPlusCircle } from 'react-icons/fa';
 
-const InputTodo = (props) => {
+const InputTodo = ({ addTodoProps }) => {
   const [inputText, setInputText] = useState({
     title: '',
   });
+  const [showError, setShowError] = useState(false);
 
   const onChange = (e) => {
     setInputText({
@@ -13,24 +14,23 @@ const InputTodo = (props) => {
       [e.target.name]: e.target.value,
     });
   };
-  const err = document.querySelector('.error');
+
   const handleSubmit = (e) => {
-    const { addTodoProps } = props;
     e.preventDefault();
     if (inputText.title.trim()) {
       addTodoProps(inputText.title);
       setInputText({
         title: '',
       });
-      err.style.visibility = 'hidden';
+      setShowError(false);
     } else {
-      err.style.visibility = 'visible';
+      setShowError(true);
     }
   };
 
   return (
     <div className="to-do-input">
-      <form onSubmit={handleSubmit} className="form-container">
+      <form className="form-container">
         <input
           type="text"
           className="input-text"
@@ -39,13 +39,29 @@ const InputTodo = (props) => {
           name="title"
           onChange={onChange}
         />
-        <button type="button" className="input-submit" label="submit"><FaPlusCircle /></button>
+        <button
+          type="submit"
+          className="input-submit"
+          label="submit"
+          onClick={handleSubmit}
+        >
+          <FaPlusCircle />
+        </button>
       </form>
-      <p className="error">Please write an item</p>
+      {showError && (
+        <p
+          className="error"
+          style={{ visibility: inputText.title.trim() ? 'hidden' : 'visible' }}
+        >
+          Please write an item
+        </p>
+      )}
     </div>
   );
 };
+
 InputTodo.propTypes = {
   addTodoProps: PropTypes.func.isRequired,
 };
+
 export default InputTodo;
